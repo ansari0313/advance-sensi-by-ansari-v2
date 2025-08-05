@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Fire Sensitivity Tool</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="login-box">
+            <h2>Login</h2>
+            <form id="loginForm">
+                <div class="input-group">
+                    <input type="text" id="username" placeholder="Username" required>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="password" placeholder="Password" required>
+                </div>
+                <button type="submit" class="glow-on-hover">Login</button>
+                <div id="error-message" class="error-message"></div>
+            </form>
+        </div>
+
+        <div class="dashboard hidden">
+            <h2>Sensitivity Settings</h2>
+            <form id="detailsForm">
+                <div class="input-group">
+                    <label for="device">Device Name:</label>
+                    <input type="text" id="device" placeholder="e.g., Samsung S21" required>
+                </div>
+                <div class="input-group">
+                    <label for="role">Gaming Role:</label>
+                    <select id="role" required>
+                        <option value="">Select Role</option>
+                        <option value="rusher">Rusher</option>
+                        <option value="allrounder">All-Rounder</option>
+                        <option value="onetapper">One-Tapper</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label for="ram">Device RAM (in GB):</label>
+                    <input type="number" id="ram" placeholder="e.g., 8" min="2" max="16" required>
+                </div>
+                <button type="submit" class="glow-on-hover">Get Sensitivity</button>
+            </form>
+            <div id="result" class="result-box hidden">
+                <h3>Recommended Sensitivity</h3>
+                <p>General: <span id="general-sens"></span></p>
+                <p>Red Dot: <span id="reddot-sens"></span></p>
+                <p>2x Scope: <span id="scope2x-sens"></span></p>
+                <p>4x Scope: <span id="scope4x-sens"></span></p>
+                <p>AWM Scope: <span id="awm-sens"></span></p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
